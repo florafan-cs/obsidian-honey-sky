@@ -1,0 +1,306 @@
+/* ============================================================
+   Honey Sky — a calm, eye-friendly blue & honey Obsidian theme
+   Clear-sky paper with honey accents; headings in sky blue.
+   ============================================================ */
+
+/* ---------- Fonts (all built into macOS; some Chinese ones
+   download free from Font Book: 手札体 Hannotate SC,
+   翩翩体 HanziPen SC, 楷体 Kaiti SC) ---------- */
+body {
+  --font-text-theme: "Baskerville", "Songti SC", "STSong", "Kaiti SC", "Palatino", Georgia, serif;
+  --font-hand: "HanziPen SC", "Hannotate SC", "Bradley Hand", "Kaiti SC", "STKaiti", cursive;
+  --font-heading: -apple-system, "PingFang SC", "Heiti SC", "Helvetica Neue", sans-serif;
+  --font-interface-theme: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+  --font-monospace-theme: "SF Mono", Menlo, "PingFang SC", monospace;
+
+  /* Sky blue accent (hsl of #2563B8). */
+  --accent-h: 214;
+  --accent-s: 67%;
+  --accent-l: 43%;
+
+  --line-height-normal: 1.85;
+  --file-line-width: 760px;
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --radius-l: 14px;
+
+  --h1-size: 2em;
+  --h2-size: 1.6em;
+  --h3-size: 1.35em;
+  --h4-size: 1.18em;
+  --h5-size: 1.08em;
+  --h6-size: 1em;
+  --h1-weight: 700;
+  --h2-weight: 700;
+  --h3-weight: 650;
+  --h4-weight: 650;
+  --h5-weight: 600;
+  --h6-weight: 600;
+}
+
+/* ---------- Light: clear-sky paper, honey accents ---------- */
+.theme-light {
+  --hs-blue: #2563b8;            /* soft sky blue for headings & links */
+  --hs-blue-hl: #e2edf9;         /* opaque, so it never looks grey on the page */
+  --hs-blue-hl-strong: #d9e8f9;
+  --hs-yellow: #f2c14e;          /* honey */
+  --hs-yellow-soft: #fdf3d4;
+  --hs-yellow-ink: #7a5a00;
+  --hs-marker: #ffe066;          /* bright yellow highlighter for **bold** */
+  --hs-sun-bg: #fff3b8;
+  --hs-sun-border: #ffd60a;
+
+  --background-primary: #f8fafd;
+  --background-primary-alt: #f1f5fa;
+  --background-secondary: #eaf2fa;
+  --background-secondary-alt: #e0ebf6;
+  --background-modifier-border: #d8e5f2;
+  --background-modifier-border-hover: #c8d9eb;
+  --background-modifier-hover: rgba(37, 99, 184, 0.07);
+  --background-modifier-active-hover: rgba(37, 99, 184, 0.12);
+
+  --text-normal: #2f3542;
+  --text-muted: #6b7385;
+  --text-faint: #9aa2b1;
+  --text-accent: var(--hs-blue);
+  --text-accent-hover: #1d4f94;
+  --text-on-accent: #ffffff;
+  --text-selection: rgba(242, 193, 78, 0.35);
+  --text-highlight-bg: var(--hs-blue-hl-strong);
+  --caret-color: var(--hs-blue);
+
+  --interactive-accent: var(--hs-blue);
+  --interactive-accent-hover: #1d4f94;
+
+  --blockquote-border-color: var(--hs-yellow);
+  --blockquote-background-color: #fdf6e1;
+  --tag-color: var(--hs-yellow-ink);
+  --tag-background: #fdecb8;
+  --tag-background-hover: #fbe08e;
+  --code-background: #eef3f9;
+  --code-normal: #3a4a63;
+  --hr-color: #dde6f0;
+  --list-marker-color: #d9a520;
+  --checkbox-color: var(--hs-yellow);
+  --checkbox-color-hover: #e5b236;
+  --checkbox-marker-color: #2f3542;
+  --nav-item-background-active: #cfe3f6;
+  --nav-item-background-hover: #dfecf8;
+  --nav-item-color-active: #1d5c96;
+  --nav-item-color-hover: #1d5c96;
+  --table-header-background: #eef4fa;
+  --table-border-color: #d8e5f2;
+}
+
+/* ---------- Dark: warm night navy ---------- */
+.theme-dark {
+  --hs-blue: #4da3ff;            /* lifted Apple blue for dark backgrounds */
+  --hs-blue-hl: rgba(10, 132, 255, 0.2);
+  --hs-blue-hl-strong: rgba(10, 132, 255, 0.3);
+  --hs-yellow: #ffd60a;          /* Apple systemYellow (dark) */
+  --hs-yellow-soft: rgba(255, 214, 10, 0.16);
+  --hs-yellow-ink: #ffd60a;
+  --hs-marker: rgba(255, 214, 10, 0.42);
+  --hs-sun-bg: rgba(255, 214, 10, 0.14);
+  --hs-sun-border: rgba(255, 214, 10, 0.55);
+
+  --background-primary: #1f2331;
+  --background-primary-alt: #1b1f2c;
+  --background-secondary: #182235;      /* night-sky sidebars */
+  --background-secondary-alt: #141c2d;
+  --background-modifier-border: #2f3446;
+  --background-modifier-border-hover: #3b4157;
+  --background-modifier-hover: rgba(255, 214, 10, 0.1);
+  --background-modifier-active-hover: rgba(255, 214, 10, 0.16);
+
+  --text-normal: #ece6d6;
+  --text-muted: #b3ab98;
+  --text-faint: #7f7a6c;
+  --text-accent: var(--hs-blue);
+  --text-accent-hover: #7cbcff;
+  --text-on-accent: #ffffff;
+  --text-selection: rgba(255, 214, 10, 0.26);
+  --text-highlight-bg: var(--hs-blue-hl-strong);
+  --caret-color: var(--hs-yellow);
+
+  --interactive-accent: #0a84ff;
+  --interactive-accent-hover: #3d9bff;
+
+  --blockquote-border-color: var(--hs-yellow);
+  --blockquote-background-color: rgba(255, 214, 10, 0.06);
+  --tag-color: var(--hs-yellow-ink);
+  --tag-background: var(--hs-yellow-soft);
+  --tag-background-hover: rgba(255, 214, 10, 0.26);
+  --code-background: #272b3b;
+  --code-normal: #e8d9a8;
+  --hr-color: #353a4d;
+  --list-marker-color: #ffd60a;
+  --checkbox-color: #ffd60a;
+  --checkbox-color-hover: #ffe04a;
+  --checkbox-marker-color: #1f2331;
+  --nav-item-background-active: rgba(110, 190, 245, 0.28);
+  --nav-item-background-hover: rgba(110, 190, 245, 0.14);
+  --nav-item-color-active: #dff0ff;
+  --nav-item-color-hover: #dff0ff;
+  --table-header-background: #262a3a;
+  --table-border-color: #2f3446;
+}
+
+/* ---------- Headings: Apple-blue text on a blue highlighter ---------- */
+body {
+  --h1-color: var(--hs-blue);
+  --h2-color: var(--hs-blue);
+  --h3-color: var(--hs-blue);
+  --h4-color: var(--hs-blue);
+  --h5-color: var(--hs-blue);
+  --h6-color: var(--hs-blue);
+  --h1-font: var(--font-heading);
+  --h2-font: var(--font-heading);
+  --h3-font: var(--font-heading);
+  --h4-font: var(--font-heading);
+  --h5-font: var(--font-heading);
+  --h6-font: var(--font-heading);
+  --inline-title-color: var(--hs-blue);
+  --inline-title-font: var(--font-heading);
+}
+
+/* Reading view: the highlight hugs the heading text instead of the full width. */
+.markdown-rendered :is(h1, h2, h3, h4, h5, h6) {
+  width: fit-content;
+  max-width: 100%;
+  background-color: var(--hs-blue-hl);
+  border-radius: var(--radius-m);
+  padding: 0.05em 0.4em;
+  margin-left: -0.4em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Live preview & source: highlight the heading text spans. */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header .cm-header:not(.cm-formatting-header) {
+  background-color: var(--hs-blue-hl);
+  border-radius: var(--radius-s);
+  padding: 0.05em 0.1em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.inline-title {
+  width: fit-content;
+  max-width: 100%;
+  background-color: var(--hs-blue-hl);
+  border-radius: var(--radius-m);
+  padding: 0.05em 0.4em;
+  margin-left: -0.4em;
+}
+
+/* ---------- ==Highlights==: the same Apple blue ---------- */
+.markdown-rendered mark,
+.cm-s-obsidian span.cm-highlight {
+  background-color: var(--hs-blue-hl-strong);
+  color: var(--hs-blue);
+  border-radius: 4px;
+  padding: 0 0.12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* ---------- **Bold** = bright yellow highlighter (Cmd+B) ---------- */
+.markdown-rendered strong,
+.cm-s-obsidian span.cm-strong:not(.cm-formatting) {
+  background: linear-gradient(transparent 55%, var(--hs-marker) 55%);
+  border-radius: 2px;
+  padding: 0 0.1em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.theme-light .markdown-rendered strong,
+.theme-light .cm-s-obsidian .cm-strong {
+  color: #1f2633;
+}
+/* Headings are already highlighted; don't stack a marker on bold inside them. */
+.markdown-rendered :is(h1, h2, h3, h4, h5, h6) strong,
+.cm-s-obsidian .HyperMD-header span.cm-strong {
+  background: none;
+}
+
+/* ---------- > [!sun] — a bright yellow sticky note ---------- */
+.callout[data-callout="sun"] {
+  --callout-color: 230, 170, 0;
+  --callout-icon: lucide-sun;
+  background-color: var(--hs-sun-bg);
+  border: 1px solid var(--hs-sun-border);
+  border-radius: var(--radius-l);
+}
+.callout[data-callout="sun"] .callout-title {
+  color: var(--hs-yellow-ink);
+}
+
+/* ---------- Blockquotes: a yellow sticky-note edge ---------- */
+.markdown-rendered blockquote {
+  background: var(--blockquote-background-color);
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+  padding: 0.4em 1em;
+}
+
+/* ---------- Tags: little yellow labels ---------- */
+.tag,
+.cm-s-obsidian span.cm-hashtag {
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* ---------- Links ---------- */
+.markdown-rendered a.internal-link,
+.cm-s-obsidian span.cm-hmd-internal-link {
+  text-decoration-color: rgba(0, 122, 255, 0.35);
+  text-underline-offset: 3px;
+}
+
+/* ---------- Images: soft corners ---------- */
+.markdown-rendered img,
+.markdown-source-view img {
+  border-radius: var(--radius-l);
+}
+
+/* ---------- Journal Companion letters: yellow letter paper ---------- */
+.callout[data-callout="ai-reply"] {
+  --callout-color: 245, 190, 0;
+  --callout-icon: lucide-mail-open;
+  background: linear-gradient(var(--hs-yellow-soft), var(--hs-yellow-soft));
+  border: 1px solid rgba(255, 204, 0, 0.45);
+  border-radius: var(--radius-l);
+  padding: 0.9em 1.2em;
+  box-shadow: 0 2px 10px rgba(180, 140, 0, 0.08);
+}
+.callout[data-callout="ai-reply"] .callout-title {
+  color: var(--hs-yellow-ink);
+  font-family: var(--font-hand);
+}
+.callout[data-callout="ai-reply"] .callout-content {
+  font-family: "Kaiti SC", "STKaiti", var(--font-text-theme);
+  line-height: 1.9;
+}
+
+/* ---------- Sidebars & file list: sky blue ---------- */
+.nav-file-title,
+.nav-folder-title,
+.tree-item-self {
+  border-radius: var(--radius-s);
+}
+.nav-file-title.is-active,
+.tree-item-self.is-active {
+  font-weight: 600;
+}
+.workspace-ribbon {
+  background-color: var(--background-secondary-alt);
+}
+
+/* ---------- Scrollbars: quiet ---------- */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 120, 150, 0.25);
+  border-radius: 8px;
+}
+.theme-dark ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.12);
+}
