@@ -172,8 +172,6 @@ body {
   border-radius: var(--radius-m);
   padding: 0.05em 0.4em;
   margin-left: -0.4em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
 }
 
 /* Live preview & source: highlight the heading text spans. */
@@ -181,8 +179,6 @@ body {
   background-color: var(--hs-blue-hl);
   border-radius: var(--radius-s);
   padding: 0.05em 0.1em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
 }
 
 .inline-title {
@@ -201,8 +197,6 @@ body {
   color: var(--hs-blue);
   border-radius: 4px;
   padding: 0 0.12em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
 }
 
 /* ---------- **Bold** = bright yellow highlighter (Cmd+B) ---------- */
@@ -211,8 +205,6 @@ body {
   background: linear-gradient(transparent 55%, var(--hs-marker) 55%);
   border-radius: 2px;
   padding: 0 0.1em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
 }
 .theme-light .markdown-rendered strong,
 .theme-light .cm-s-obsidian .cm-strong {
@@ -248,13 +240,6 @@ body {
 .cm-s-obsidian span.cm-hashtag {
   border-radius: 999px;
   font-weight: 600;
-}
-
-/* ---------- Links ---------- */
-.markdown-rendered a.internal-link,
-.cm-s-obsidian span.cm-hmd-internal-link {
-  text-decoration-color: rgba(0, 122, 255, 0.35);
-  text-underline-offset: 3px;
 }
 
 /* ---------- Images: soft corners ---------- */
