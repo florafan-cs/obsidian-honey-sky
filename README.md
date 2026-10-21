@@ -6,6 +6,8 @@ Sky-blue paper and sidebars keep long writing sessions easy on the eyes. Bright 
 
 [中文说明 ↓](#中文说明)
 
+![Honey Sky in light and dark mode](assets/showcase.png)
+
 ![Honey Sky, light mode](assets/preview-light.png)
 
 ![Honey Sky, dark mode](assets/preview-dark.png)
