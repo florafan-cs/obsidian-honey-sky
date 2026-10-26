@@ -42,20 +42,21 @@ Every text color is checked for contrast against its background. Body text is 11
 
 A suggestion: yellow for feelings and insights, blue for facts and things you learned, and one sticky note a day for the thing that mattered most.
 
-## Rainbow folders and six highlighters
+## Rainbow folders and Apple-style highlights
 
 ![Rainbow folders and highlighter colors, light and dark](assets/rainbow.png)
 
-**Rainbow folders.** Each top-level folder in the sidebar gets its own soft color: sky, honey, mint, peach, lavender, rose, repeating in order. The folder title is tinted and the indent guides inside it match. Prefer plain sky-blue? Install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin and switch on **Honey Sky → Turn off rainbow folders**.
+**Rainbow folders.** Each top-level folder in the sidebar gets one of Apple's system colors: blue, yellow, mint, orange, purple, pink, repeating in order. The folder title gets a clean tint with matching text, and the indent guides inside it match. Prefer plain sky-blue? Install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin and switch on **Honey Sky → Turn off rainbow folders**.
 
-**Six highlighters.** Besides the honey marker (`**bold**`) and sky blue (`==highlight==`), you can use:
+**Apple Notes–style highlights.** Every highlight is a soft tint with text in the same color. `==highlight==` is blue, `**bold**` keeps the honey marker stroke, and you can add:
 
 ```html
-<mark class="pink">people I love</mark>
+<mark class="yellow">what matters</mark>
 <mark class="green">good habits</mark>
-<mark class="purple">big ideas</mark>
+<mark class="mint">sparks of inspiration</mark>
 <mark class="orange">to-dos</mark>
-<mark class="yellow">a honey marker stroke</mark>
+<mark class="purple">big ideas</mark>
+<mark class="pink">people I love</mark>
 ```
 
 Using the [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin) plugin? Its colors work too, with rounded corners and readable text.
@@ -106,17 +107,19 @@ MIT
 
 建议这样分工：黄色标感受和领悟，蓝色标知识和要记住的事，每天只用一张黄色便签记录最重要的一件事。
 
-### 彩虹文件夹和六色荧光笔
+### 彩虹文件夹和苹果式高亮
 
-**彩虹文件夹**：侧栏里每个顶层文件夹会有自己的柔和颜色，依次是天蓝、蜂蜜、薄荷、蜜桃、薰衣草、玫瑰，循环使用。文件夹标题带淡色底，展开后的缩进线也是同一种颜色。喜欢简洁的话，安装 Style Settings 插件，打开 **Honey Sky → Turn off rainbow folders** 就能关掉。
+**彩虹文件夹**：侧栏里每个顶层文件夹会依次用一种苹果系统色：蓝、黄、薄荷、橙、紫、粉，循环使用。文件夹标题是浅色底配同色的字，展开后的缩进线也是同一种颜色。喜欢简洁的话，安装 Style Settings 插件，打开 **Honey Sky → Turn off rainbow folders** 就能关掉。
 
-**六色荧光笔**：除了加粗的蜂蜜黄和 `==高亮==` 的天蓝，还可以这样写：
+**苹果备忘录式高亮**：浅色底配同色的字。`==高亮==` 是蓝色，加粗保留蜂蜜荧光笔，还可以这样写：
 
 ```html
-<mark class="pink">粉色：重要的人</mark>
+<mark class="yellow">黄色：重点</mark>
 <mark class="green">绿色：好习惯</mark>
-<mark class="purple">紫色：大想法</mark>
+<mark class="mint">薄荷：灵感</mark>
 <mark class="orange">橙色：待办</mark>
+<mark class="purple">紫色：大想法</mark>
+<mark class="pink">粉色：重要的人</mark>
 ```
 
 用 Highlightr 插件选的颜色也能正常显示。

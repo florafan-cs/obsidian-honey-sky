@@ -307,66 +307,67 @@ settings:
 
 */
 
-/* ---------- Rainbow folders: a soft color per top-level folder ---------- */
-body {
-  --hs-r1: 74, 158, 222;   /* sky */
-  --hs-r2: 236, 178, 40;   /* honey */
-  --hs-r3: 72, 178, 136;   /* mint */
-  --hs-r4: 240, 140, 70;   /* peach */
-  --hs-r5: 150, 120, 230;  /* lavender */
-  --hs-r6: 232, 110, 150;  /* rose */
+/* ---------- Rainbow folders: Apple system colors, one per top-level folder ----------
+   Opaque tints (not transparency) so warm colors stay clean on the sky-blue sidebar. */
+.theme-light {
+  --hs-c-blue: #007aff; --hs-c-blue-tint: #dcebff; --hs-c-blue-ink: #0a5bc4; --hs-c-blue-guide: #b9d6fb;
+  --hs-c-yellow: #ffcc00; --hs-c-yellow-tint: #fff1c2; --hs-c-yellow-ink: #7d5800; --hs-c-yellow-guide: #f3dc8a;
+  --hs-c-mint: #00c7be; --hs-c-mint-tint: #d3f4f1; --hs-c-mint-ink: #00756c; --hs-c-mint-guide: #a3e2dc;
+  --hs-c-orange: #ff9500; --hs-c-orange-tint: #ffe6c7; --hs-c-orange-ink: #9e4e00; --hs-c-orange-guide: #f6cb95;
+  --hs-c-purple: #af52de; --hs-c-purple-tint: #f1e2fa; --hs-c-purple-ink: #7a33a3; --hs-c-purple-guide: #dbbdf0;
+  --hs-c-pink: #ff2d55; --hs-c-pink-tint: #ffdde5; --hs-c-pink-ink: #bf1b43; --hs-c-pink-guide: #f5b6c5;
+  --hs-c-green-tint: #d9f5e1; --hs-c-green-ink: #1c7537;
 }
-.nav-files-container > div > .nav-folder:nth-child(6n + 1) { --hs-folder: var(--hs-r1); }
-.nav-files-container > div > .nav-folder:nth-child(6n + 2) { --hs-folder: var(--hs-r2); }
-.nav-files-container > div > .nav-folder:nth-child(6n + 3) { --hs-folder: var(--hs-r3); }
-.nav-files-container > div > .nav-folder:nth-child(6n + 4) { --hs-folder: var(--hs-r4); }
-.nav-files-container > div > .nav-folder:nth-child(6n + 5) { --hs-folder: var(--hs-r5); }
-.nav-files-container > div > .nav-folder:nth-child(6n + 6) { --hs-folder: var(--hs-r6); }
-
+.theme-dark {
+  --hs-c-blue: #007aff; --hs-c-blue-tint: rgba(0, 122, 255, 0.22); --hs-c-blue-ink: #7cbcff; --hs-c-blue-guide: rgba(0, 122, 255, 0.45);
+  --hs-c-yellow: #ffcc00; --hs-c-yellow-tint: rgba(255, 204, 0, 0.22); --hs-c-yellow-ink: #ffd95a; --hs-c-yellow-guide: rgba(255, 204, 0, 0.45);
+  --hs-c-mint: #00c7be; --hs-c-mint-tint: rgba(0, 199, 190, 0.22); --hs-c-mint-ink: #6ee8df; --hs-c-mint-guide: rgba(0, 199, 190, 0.45);
+  --hs-c-orange: #ff9500; --hs-c-orange-tint: rgba(255, 149, 0, 0.22); --hs-c-orange-ink: #ffb760; --hs-c-orange-guide: rgba(255, 149, 0, 0.45);
+  --hs-c-purple: #af52de; --hs-c-purple-tint: rgba(175, 82, 222, 0.22); --hs-c-purple-ink: #d8a4f7; --hs-c-purple-guide: rgba(175, 82, 222, 0.45);
+  --hs-c-pink: #ff2d55; --hs-c-pink-tint: rgba(255, 45, 85, 0.22); --hs-c-pink-ink: #ff8ea6; --hs-c-pink-guide: rgba(255, 45, 85, 0.45);
+  --hs-c-green-tint: rgba(52, 199, 89, 0.22); --hs-c-green-ink: #7ee69a;
+}
+.nav-files-container > div > .nav-folder:nth-child(6n + 1) { --hs-f: var(--hs-c-blue); --hs-f-tint: var(--hs-c-blue-tint); --hs-f-ink: var(--hs-c-blue-ink); --hs-f-guide: var(--hs-c-blue-guide); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 2) { --hs-f: var(--hs-c-yellow); --hs-f-tint: var(--hs-c-yellow-tint); --hs-f-ink: var(--hs-c-yellow-ink); --hs-f-guide: var(--hs-c-yellow-guide); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 3) { --hs-f: var(--hs-c-mint); --hs-f-tint: var(--hs-c-mint-tint); --hs-f-ink: var(--hs-c-mint-ink); --hs-f-guide: var(--hs-c-mint-guide); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 4) { --hs-f: var(--hs-c-orange); --hs-f-tint: var(--hs-c-orange-tint); --hs-f-ink: var(--hs-c-orange-ink); --hs-f-guide: var(--hs-c-orange-guide); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 5) { --hs-f: var(--hs-c-purple); --hs-f-tint: var(--hs-c-purple-tint); --hs-f-ink: var(--hs-c-purple-ink); --hs-f-guide: var(--hs-c-purple-guide); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 6) { --hs-f: var(--hs-c-pink); --hs-f-tint: var(--hs-c-pink-tint); --hs-f-ink: var(--hs-c-pink-ink); --hs-f-guide: var(--hs-c-pink-guide); }
 body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder > .nav-folder-title {
-  background-color: rgba(var(--hs-folder), 0.16);
-  border-left: 4px solid rgb(var(--hs-folder));
+  background-color: var(--hs-f-tint);
+  color: var(--hs-f-ink);
+  border-left: 4px solid var(--hs-f);
   border-radius: var(--radius-s);
   font-weight: 600;
   margin-bottom: 2px;
 }
 body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder > .nav-folder-title:hover {
-  background-color: rgba(var(--hs-folder), 0.26);
+  filter: brightness(0.97);
 }
 body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder > .nav-folder-title .collapse-icon {
-  color: rgb(var(--hs-folder));
+  color: var(--hs-f-ink);
 }
-/* Indent guides inside each folder take its color. */
 body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder {
-  --nav-indentation-guide-color: rgba(var(--hs-folder), 0.55);
+  --nav-indentation-guide-color: var(--hs-f-guide);
   --nav-indentation-guide-width: 2px;
 }
 
-/* ---------- More highlighter colors ----------
-   <mark class="yellow|pink|green|purple|orange|blue">text</mark>
-   Also tidies marks made by the Highlightr plugin (inline style). */
-.theme-light {
-  --hs-pink-bg: #ffd9e6;   --hs-pink-fg: #9c2c5a;
-  --hs-green-bg: #d4f2e3;  --hs-green-fg: #1e6b4a;
-  --hs-purple-bg: #e9e0fc; --hs-purple-fg: #5b3fa8;
-  --hs-orange-bg: #ffe4cc; --hs-orange-fg: #9a4b0f;
+/* ---------- Highlights, Apple Notes style: a soft tint with matching text ----------
+   ==text== is blue. More colors: <mark class="yellow|green|mint|orange|purple|pink|blue">text</mark>
+   (**bold** keeps the honey highlighter stroke.) */
+.markdown-rendered mark,
+.cm-s-obsidian span.cm-highlight {
+  background-color: var(--hs-c-blue-tint);
+  color: var(--hs-c-blue-ink);
 }
-.theme-dark {
-  --hs-pink-bg: rgba(242, 120, 160, 0.26);  --hs-pink-fg: #ffb3cc;
-  --hs-green-bg: rgba(80, 200, 150, 0.24);  --hs-green-fg: #9ff0c8;
-  --hs-purple-bg: rgba(160, 130, 245, 0.28); --hs-purple-fg: #d4c4ff;
-  --hs-orange-bg: rgba(250, 150, 70, 0.26); --hs-orange-fg: #ffc796;
-}
-mark.pink   { background-color: var(--hs-pink-bg);   color: var(--hs-pink-fg); }
-mark.green  { background-color: var(--hs-green-bg);  color: var(--hs-green-fg); }
-mark.purple { background-color: var(--hs-purple-bg); color: var(--hs-purple-fg); }
-mark.orange { background-color: var(--hs-orange-bg); color: var(--hs-orange-fg); }
-mark.blue   { background-color: var(--hs-blue-hl-strong); color: var(--hs-blue); }
-mark.yellow {
-  background: linear-gradient(transparent 55%, var(--hs-marker) 55%);
-  color: inherit;
-}
-mark.pink, mark.green, mark.purple, mark.orange, mark.blue, mark.yellow, mark[style] {
+mark.blue { background-color: var(--hs-c-blue-tint); color: var(--hs-c-blue-ink); }
+mark.yellow { background-color: var(--hs-c-yellow-tint); color: var(--hs-c-yellow-ink); }
+mark.green { background-color: var(--hs-c-green-tint); color: var(--hs-c-green-ink); }
+mark.mint { background-color: var(--hs-c-mint-tint); color: var(--hs-c-mint-ink); }
+mark.orange { background-color: var(--hs-c-orange-tint); color: var(--hs-c-orange-ink); }
+mark.purple { background-color: var(--hs-c-purple-tint); color: var(--hs-c-purple-ink); }
+mark.pink { background-color: var(--hs-c-pink-tint); color: var(--hs-c-pink-ink); }
+mark.blue, mark.yellow, mark.green, mark.mint, mark.orange, mark.purple, mark.pink, mark[style] {
   border-radius: 4px;
   padding: 0 0.12em;
 }
