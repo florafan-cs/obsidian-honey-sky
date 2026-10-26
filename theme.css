@@ -289,3 +289,88 @@ body {
 .theme-dark ::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.12);
 }
+
+/* ============================================================
+   Style Settings (optional plugin) — lets people switch features off
+   ============================================================ */
+/* @settings
+
+name: Honey Sky
+id: honey-sky
+settings:
+    -
+        id: hs-rainbow-off
+        title: Turn off rainbow folders
+        description: Use plain sky-blue sidebars instead of a soft color per top-level folder.
+        type: class-toggle
+        default: false
+
+*/
+
+/* ---------- Rainbow folders: a soft color per top-level folder ---------- */
+body {
+  --hs-r1: 74, 158, 222;   /* sky */
+  --hs-r2: 236, 178, 40;   /* honey */
+  --hs-r3: 72, 178, 136;   /* mint */
+  --hs-r4: 240, 140, 70;   /* peach */
+  --hs-r5: 150, 120, 230;  /* lavender */
+  --hs-r6: 232, 110, 150;  /* rose */
+}
+.nav-files-container > div > .nav-folder:nth-child(6n + 1) { --hs-folder: var(--hs-r1); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 2) { --hs-folder: var(--hs-r2); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 3) { --hs-folder: var(--hs-r3); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 4) { --hs-folder: var(--hs-r4); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 5) { --hs-folder: var(--hs-r5); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 6) { --hs-folder: var(--hs-r6); }
+
+body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder > .nav-folder-title {
+  background-color: rgba(var(--hs-folder), 0.16);
+  border-left: 4px solid rgb(var(--hs-folder));
+  border-radius: var(--radius-s);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder > .nav-folder-title:hover {
+  background-color: rgba(var(--hs-folder), 0.26);
+}
+body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder > .nav-folder-title .collapse-icon {
+  color: rgb(var(--hs-folder));
+}
+/* Indent guides inside each folder take its color. */
+body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder {
+  --nav-indentation-guide-color: rgba(var(--hs-folder), 0.55);
+  --nav-indentation-guide-width: 2px;
+}
+
+/* ---------- More highlighter colors ----------
+   <mark class="yellow|pink|green|purple|orange|blue">text</mark>
+   Also tidies marks made by the Highlightr plugin (inline style). */
+.theme-light {
+  --hs-pink-bg: #ffd9e6;   --hs-pink-fg: #9c2c5a;
+  --hs-green-bg: #d4f2e3;  --hs-green-fg: #1e6b4a;
+  --hs-purple-bg: #e9e0fc; --hs-purple-fg: #5b3fa8;
+  --hs-orange-bg: #ffe4cc; --hs-orange-fg: #9a4b0f;
+}
+.theme-dark {
+  --hs-pink-bg: rgba(242, 120, 160, 0.26);  --hs-pink-fg: #ffb3cc;
+  --hs-green-bg: rgba(80, 200, 150, 0.24);  --hs-green-fg: #9ff0c8;
+  --hs-purple-bg: rgba(160, 130, 245, 0.28); --hs-purple-fg: #d4c4ff;
+  --hs-orange-bg: rgba(250, 150, 70, 0.26); --hs-orange-fg: #ffc796;
+}
+mark.pink   { background-color: var(--hs-pink-bg);   color: var(--hs-pink-fg); }
+mark.green  { background-color: var(--hs-green-bg);  color: var(--hs-green-fg); }
+mark.purple { background-color: var(--hs-purple-bg); color: var(--hs-purple-fg); }
+mark.orange { background-color: var(--hs-orange-bg); color: var(--hs-orange-fg); }
+mark.blue   { background-color: var(--hs-blue-hl-strong); color: var(--hs-blue); }
+mark.yellow {
+  background: linear-gradient(transparent 55%, var(--hs-marker) 55%);
+  color: inherit;
+}
+mark.pink, mark.green, mark.purple, mark.orange, mark.blue, mark.yellow, mark[style] {
+  border-radius: 4px;
+  padding: 0 0.12em;
+}
+/* Highlightr sets its own background; keep text readable on it. */
+mark[style] {
+  color: var(--text-normal);
+}

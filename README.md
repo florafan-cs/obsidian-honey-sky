@@ -42,6 +42,24 @@ Every text color is checked for contrast against its background. Body text is 11
 
 A suggestion: yellow for feelings and insights, blue for facts and things you learned, and one sticky note a day for the thing that mattered most.
 
+## Rainbow folders and six highlighters
+
+![Rainbow folders and highlighter colors, light and dark](assets/rainbow.png)
+
+**Rainbow folders.** Each top-level folder in the sidebar gets its own soft color: sky, honey, mint, peach, lavender, rose, repeating in order. The folder title is tinted and the indent guides inside it match. Prefer plain sky-blue? Install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin and switch on **Honey Sky → Turn off rainbow folders**.
+
+**Six highlighters.** Besides the honey marker (`**bold**`) and sky blue (`==highlight==`), you can use:
+
+```html
+<mark class="pink">people I love</mark>
+<mark class="green">good habits</mark>
+<mark class="purple">big ideas</mark>
+<mark class="orange">to-dos</mark>
+<mark class="yellow">a honey marker stroke</mark>
+```
+
+Using the [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin) plugin? Its colors work too, with rounded corners and readable text.
+
 ## Fonts
 
 Honey Sky uses fonts that come with macOS. Headings and body text work out of the box; Kaiti SC, used for letters, may need a one-click download in Font Book.
@@ -87,6 +105,21 @@ MIT
 | ☀️ 黄色便签 | `> [!sun] 今日重点`，下一行写 `> 内容` | |
 
 建议这样分工：黄色标感受和领悟，蓝色标知识和要记住的事，每天只用一张黄色便签记录最重要的一件事。
+
+### 彩虹文件夹和六色荧光笔
+
+**彩虹文件夹**：侧栏里每个顶层文件夹会有自己的柔和颜色，依次是天蓝、蜂蜜、薄荷、蜜桃、薰衣草、玫瑰，循环使用。文件夹标题带淡色底，展开后的缩进线也是同一种颜色。喜欢简洁的话，安装 Style Settings 插件，打开 **Honey Sky → Turn off rainbow folders** 就能关掉。
+
+**六色荧光笔**：除了加粗的蜂蜜黄和 `==高亮==` 的天蓝，还可以这样写：
+
+```html
+<mark class="pink">粉色：重要的人</mark>
+<mark class="green">绿色：好习惯</mark>
+<mark class="purple">紫色：大想法</mark>
+<mark class="orange">橙色：待办</mark>
+```
+
+用 Highlightr 插件选的颜色也能正常显示。
 
 ### 字体
 
