@@ -42,16 +42,17 @@ Every text color is checked for contrast against its background. Body text is 11
 
 A suggestion: yellow for feelings and insights, blue for facts and things you learned, and one sticky note a day for the thing that mattered most.
 
-## Rainbow folders and Apple-style highlights
+## Rainbow folders and paper highlighters
 
 ![Rainbow folders and highlighter colors, light and dark](assets/rainbow.png)
 
-**Rainbow folders.** Each top-level folder in the sidebar gets one of Apple's system colors: blue, yellow, mint, orange, purple, pink, repeating in order. The folder title gets a clean tint with matching text, and the indent guides inside it match. Prefer plain sky-blue? Install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin and switch on **Honey Sky → Turn off rainbow folders**.
+**Rainbow folders.** Each top-level folder in the sidebar gets a quiet, muted color: misty blue, honey, sage, apricot, lilac, dusty rose, repeating in order. It shows as a thin bar, a colored arrow and matching indent guides, so the sidebar stays calm. Prefer plain sky-blue? Install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin and switch on **Honey Sky → Turn off rainbow folders**.
 
-**Apple Notes–style highlights.** Every highlight is a soft tint with text in the same color. `==highlight==` is blue, `**bold**` keeps the honey marker stroke, and you can add:
+**Paper highlighters.** Every highlight is a marker stroke across the lower part of the text, with slanted ends like a real highlighter on paper, and the text keeps its ink color. `**bold**` is honey, `==highlight==` is sky blue, and you can add:
 
 ```html
 <mark class="yellow">what matters</mark>
+<mark class="blue">facts to remember</mark>
 <mark class="green">good habits</mark>
 <mark class="mint">sparks of inspiration</mark>
 <mark class="orange">to-dos</mark>
@@ -107,14 +108,15 @@ MIT
 
 建议这样分工：黄色标感受和领悟，蓝色标知识和要记住的事，每天只用一张黄色便签记录最重要的一件事。
 
-### 彩虹文件夹和苹果式高亮
+### 彩虹文件夹和纸质荧光笔
 
-**彩虹文件夹**：侧栏里每个顶层文件夹会依次用一种苹果系统色：蓝、黄、薄荷、橙、紫、粉，循环使用。文件夹标题是浅色底配同色的字，展开后的缩进线也是同一种颜色。喜欢简洁的话，安装 Style Settings 插件，打开 **Honey Sky → Turn off rainbow folders** 就能关掉。
+**彩虹文件夹**：侧栏里每个顶层文件夹会依次用一种柔和的莫兰迪色：雾蓝、蜂蜜、鼠尾草绿、杏色、丁香紫、玫瑰灰，循环使用。只显示一道细色条、彩色小箭头和同色的缩进线，侧栏依然安静。喜欢简洁的话，安装 Style Settings 插件，打开 **Honey Sky → Turn off rainbow folders** 就能关掉。
 
-**苹果备忘录式高亮**：浅色底配同色的字。`==高亮==` 是蓝色，加粗保留蜂蜜荧光笔，还可以这样写：
+**纸质荧光笔**：所有高亮都像在纸上用荧光笔划过，只涂文字下半截，两端微微斜切，字保持原来的墨色。加粗是蜂蜜黄，`==高亮==` 是天蓝，还可以这样写：
 
 ```html
 <mark class="yellow">黄色：重点</mark>
+<mark class="blue">蓝色：知识点</mark>
 <mark class="green">绿色：好习惯</mark>
 <mark class="mint">薄荷：灵感</mark>
 <mark class="orange">橙色：待办</mark>

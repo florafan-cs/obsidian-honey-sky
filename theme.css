@@ -190,22 +190,7 @@ body {
   margin-left: -0.4em;
 }
 
-/* ---------- ==Highlights==: the same Apple blue ---------- */
-.markdown-rendered mark,
-.cm-s-obsidian span.cm-highlight {
-  background-color: var(--hs-blue-hl-strong);
-  color: var(--hs-blue);
-  border-radius: 4px;
-  padding: 0 0.12em;
-}
-
-/* ---------- **Bold** = bright yellow highlighter (Cmd+B) ---------- */
-.markdown-rendered strong,
-.cm-s-obsidian span.cm-strong:not(.cm-formatting) {
-  background: linear-gradient(transparent 55%, var(--hs-marker) 55%);
-  border-radius: 2px;
-  padding: 0 0.1em;
-}
+/* ---------- **Bold**: drawn with the honey highlighter (see "Paper highlighters") ---------- */
 .theme-light .markdown-rendered strong,
 .theme-light .cm-s-obsidian .cm-strong {
   color: #1f2633;
@@ -307,71 +292,100 @@ settings:
 
 */
 
-/* ---------- Rainbow folders: Apple system colors, one per top-level folder ----------
-   Opaque tints (not transparency) so warm colors stay clean on the sky-blue sidebar. */
+/* ---------- Rainbow folders: quiet, muted colors ----------
+   No color blocks: a thin colored bar, a colored arrow and matching indent
+   guides. Folder names keep the normal text color. */
 .theme-light {
-  --hs-c-blue: #007aff; --hs-c-blue-tint: #dcebff; --hs-c-blue-ink: #0a5bc4; --hs-c-blue-guide: #b9d6fb;
-  --hs-c-yellow: #ffcc00; --hs-c-yellow-tint: #fff1c2; --hs-c-yellow-ink: #7d5800; --hs-c-yellow-guide: #f3dc8a;
-  --hs-c-mint: #00c7be; --hs-c-mint-tint: #d3f4f1; --hs-c-mint-ink: #00756c; --hs-c-mint-guide: #a3e2dc;
-  --hs-c-orange: #ff9500; --hs-c-orange-tint: #ffe6c7; --hs-c-orange-ink: #9e4e00; --hs-c-orange-guide: #f6cb95;
-  --hs-c-purple: #af52de; --hs-c-purple-tint: #f1e2fa; --hs-c-purple-ink: #7a33a3; --hs-c-purple-guide: #dbbdf0;
-  --hs-c-pink: #ff2d55; --hs-c-pink-tint: #ffdde5; --hs-c-pink-ink: #bf1b43; --hs-c-pink-guide: #f5b6c5;
-  --hs-c-green-tint: #d9f5e1; --hs-c-green-ink: #1c7537;
+  --hs-f1: #7ea6d6; --hs-f1-guide: #bcd1ec;   /* misty blue */
+  --hs-f2: #ddb24a; --hs-f2-guide: #e9d6a4;   /* honey */
+  --hs-f3: #82b897; --hs-f3-guide: #bcd9ca;   /* sage */
+  --hs-f4: #e39f6e; --hs-f4-guide: #ecccb6;   /* apricot */
+  --hs-f5: #a68fd4; --hs-f5-guide: #cfc4ea;   /* lilac */
+  --hs-f6: #d98ca0; --hs-f6-guide: #ebc6d2;   /* dusty rose */
 }
 .theme-dark {
-  --hs-c-blue: #007aff; --hs-c-blue-tint: rgba(0, 122, 255, 0.22); --hs-c-blue-ink: #7cbcff; --hs-c-blue-guide: rgba(0, 122, 255, 0.45);
-  --hs-c-yellow: #ffcc00; --hs-c-yellow-tint: rgba(255, 204, 0, 0.22); --hs-c-yellow-ink: #ffd95a; --hs-c-yellow-guide: rgba(255, 204, 0, 0.45);
-  --hs-c-mint: #00c7be; --hs-c-mint-tint: rgba(0, 199, 190, 0.22); --hs-c-mint-ink: #6ee8df; --hs-c-mint-guide: rgba(0, 199, 190, 0.45);
-  --hs-c-orange: #ff9500; --hs-c-orange-tint: rgba(255, 149, 0, 0.22); --hs-c-orange-ink: #ffb760; --hs-c-orange-guide: rgba(255, 149, 0, 0.45);
-  --hs-c-purple: #af52de; --hs-c-purple-tint: rgba(175, 82, 222, 0.22); --hs-c-purple-ink: #d8a4f7; --hs-c-purple-guide: rgba(175, 82, 222, 0.45);
-  --hs-c-pink: #ff2d55; --hs-c-pink-tint: rgba(255, 45, 85, 0.22); --hs-c-pink-ink: #ff8ea6; --hs-c-pink-guide: rgba(255, 45, 85, 0.45);
-  --hs-c-green-tint: rgba(52, 199, 89, 0.22); --hs-c-green-ink: #7ee69a;
+  --hs-f1: #8fb6e6; --hs-f1-guide: rgba(143, 182, 230, 0.4);
+  --hs-f2: #e6c36a; --hs-f2-guide: rgba(230, 195, 106, 0.4);
+  --hs-f3: #8fcaa8; --hs-f3-guide: rgba(143, 202, 168, 0.4);
+  --hs-f4: #eeb083; --hs-f4-guide: rgba(238, 176, 131, 0.4);
+  --hs-f5: #b9a0e3; --hs-f5-guide: rgba(185, 160, 227, 0.4);
+  --hs-f6: #e79db0; --hs-f6-guide: rgba(231, 157, 176, 0.4);
 }
-.nav-files-container > div > .nav-folder:nth-child(6n + 1) { --hs-f: var(--hs-c-blue); --hs-f-tint: var(--hs-c-blue-tint); --hs-f-ink: var(--hs-c-blue-ink); --hs-f-guide: var(--hs-c-blue-guide); }
-.nav-files-container > div > .nav-folder:nth-child(6n + 2) { --hs-f: var(--hs-c-yellow); --hs-f-tint: var(--hs-c-yellow-tint); --hs-f-ink: var(--hs-c-yellow-ink); --hs-f-guide: var(--hs-c-yellow-guide); }
-.nav-files-container > div > .nav-folder:nth-child(6n + 3) { --hs-f: var(--hs-c-mint); --hs-f-tint: var(--hs-c-mint-tint); --hs-f-ink: var(--hs-c-mint-ink); --hs-f-guide: var(--hs-c-mint-guide); }
-.nav-files-container > div > .nav-folder:nth-child(6n + 4) { --hs-f: var(--hs-c-orange); --hs-f-tint: var(--hs-c-orange-tint); --hs-f-ink: var(--hs-c-orange-ink); --hs-f-guide: var(--hs-c-orange-guide); }
-.nav-files-container > div > .nav-folder:nth-child(6n + 5) { --hs-f: var(--hs-c-purple); --hs-f-tint: var(--hs-c-purple-tint); --hs-f-ink: var(--hs-c-purple-ink); --hs-f-guide: var(--hs-c-purple-guide); }
-.nav-files-container > div > .nav-folder:nth-child(6n + 6) { --hs-f: var(--hs-c-pink); --hs-f-tint: var(--hs-c-pink-tint); --hs-f-ink: var(--hs-c-pink-ink); --hs-f-guide: var(--hs-c-pink-guide); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 1) { --hs-f: var(--hs-f1); --hs-f-guide: var(--hs-f1-guide); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 2) { --hs-f: var(--hs-f2); --hs-f-guide: var(--hs-f2-guide); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 3) { --hs-f: var(--hs-f3); --hs-f-guide: var(--hs-f3-guide); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 4) { --hs-f: var(--hs-f4); --hs-f-guide: var(--hs-f4-guide); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 5) { --hs-f: var(--hs-f5); --hs-f-guide: var(--hs-f5-guide); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 6) { --hs-f: var(--hs-f6); --hs-f-guide: var(--hs-f6-guide); }
 body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder > .nav-folder-title {
-  background-color: var(--hs-f-tint);
-  color: var(--hs-f-ink);
-  border-left: 4px solid var(--hs-f);
-  border-radius: var(--radius-s);
+  border-left: 3px solid var(--hs-f);
+  border-radius: 0 var(--radius-s) var(--radius-s) 0;
   font-weight: 600;
-  margin-bottom: 2px;
-}
-body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder > .nav-folder-title:hover {
-  filter: brightness(0.97);
 }
 body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder > .nav-folder-title .collapse-icon {
-  color: var(--hs-f-ink);
+  color: var(--hs-f);
 }
 body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder {
   --nav-indentation-guide-color: var(--hs-f-guide);
-  --nav-indentation-guide-width: 2px;
+  --nav-indentation-guide-width: 1.5px;
 }
 
-/* ---------- Highlights, Apple Notes style: a soft tint with matching text ----------
-   ==text== is blue. More colors: <mark class="yellow|green|mint|orange|purple|pink|blue">text</mark>
-   (**bold** keeps the honey highlighter stroke.) */
+/* ---------- Paper highlighters ----------
+   Every highlight is a marker stroke over the lower part of the text, with
+   slanted ends like a real highlighter on paper. Text keeps its ink color.
+   **bold** = honey · ==text== = sky blue ·
+   <mark class="yellow|blue|pink|green|orange|purple|mint">text</mark> */
+.theme-light {
+  --hs-mk-yellow: #ffe066;
+  --hs-mk-blue: #b9dcff;
+  --hs-mk-pink: #ffc4d6;
+  --hs-mk-green: #c9efb4;
+  --hs-mk-orange: #ffd5a8;
+  --hs-mk-purple: #e0d0fb;
+  --hs-mk-mint: #b6efe5;
+}
+.theme-dark {
+  --hs-mk-yellow: rgba(255, 214, 10, 0.42);
+  --hs-mk-blue: rgba(90, 170, 255, 0.4);
+  --hs-mk-pink: rgba(255, 120, 160, 0.4);
+  --hs-mk-green: rgba(120, 220, 120, 0.34);
+  --hs-mk-orange: rgba(255, 160, 80, 0.4);
+  --hs-mk-purple: rgba(180, 140, 255, 0.4);
+  --hs-mk-mint: rgba(80, 220, 200, 0.34);
+}
+.markdown-rendered strong,
+.cm-s-obsidian span.cm-strong:not(.cm-formatting) { --hs-mk: var(--hs-mk-yellow); }
 .markdown-rendered mark,
-.cm-s-obsidian span.cm-highlight {
-  background-color: var(--hs-c-blue-tint);
-  color: var(--hs-c-blue-ink);
+.cm-s-obsidian span.cm-highlight:not(.cm-formatting) { --hs-mk: var(--hs-mk-blue); }
+mark.yellow { --hs-mk: var(--hs-mk-yellow); }
+mark.blue   { --hs-mk: var(--hs-mk-blue); }
+mark.pink   { --hs-mk: var(--hs-mk-pink); }
+mark.green  { --hs-mk: var(--hs-mk-green); }
+mark.orange { --hs-mk: var(--hs-mk-orange); }
+mark.purple { --hs-mk: var(--hs-mk-purple); }
+mark.mint   { --hs-mk: var(--hs-mk-mint); }
+
+.markdown-rendered strong,
+.cm-s-obsidian span.cm-strong:not(.cm-formatting),
+.markdown-rendered mark,
+.cm-s-obsidian span.cm-highlight:not(.cm-formatting),
+mark {
+  background-color: transparent;
+  background-image: linear-gradient(100deg, transparent 0.1em, var(--hs-mk) 0.3em, var(--hs-mk) calc(100% - 0.3em), transparent calc(100% - 0.1em));
+  background-size: 100% 58%;
+  background-position: 0 92%;
+  background-repeat: no-repeat;
+  color: inherit;
+  padding: 0 0.2em;
+  border-radius: 0.2em;
 }
-mark.blue { background-color: var(--hs-c-blue-tint); color: var(--hs-c-blue-ink); }
-mark.yellow { background-color: var(--hs-c-yellow-tint); color: var(--hs-c-yellow-ink); }
-mark.green { background-color: var(--hs-c-green-tint); color: var(--hs-c-green-ink); }
-mark.mint { background-color: var(--hs-c-mint-tint); color: var(--hs-c-mint-ink); }
-mark.orange { background-color: var(--hs-c-orange-tint); color: var(--hs-c-orange-ink); }
-mark.purple { background-color: var(--hs-c-purple-tint); color: var(--hs-c-purple-ink); }
-mark.pink { background-color: var(--hs-c-pink-tint); color: var(--hs-c-pink-ink); }
-mark.blue, mark.yellow, mark.green, mark.mint, mark.orange, mark.purple, mark.pink, mark[style] {
-  border-radius: 4px;
-  padding: 0 0.12em;
+/* Headings are already highlighted; no marker inside them. */
+.markdown-rendered :is(h1, h2, h3, h4, h5, h6) :is(strong, mark),
+.cm-s-obsidian .HyperMD-header :is(span.cm-strong, span.cm-highlight) {
+  background-image: none;
 }
-/* Highlightr sets its own background; keep text readable on it. */
+/* Highlightr plugin marks keep their own color (inline style). */
 mark[style] {
   color: var(--text-normal);
+  background-size: auto;
 }
