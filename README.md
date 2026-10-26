@@ -8,18 +8,14 @@ Sky-blue paper and sidebars keep long writing sessions easy on the eyes. Bright 
 
 ![Honey Sky in light and dark mode](assets/showcase.png)
 
-![Honey Sky, light mode](assets/preview-light.png)
-
-![Honey Sky, dark mode](assets/preview-dark.png)
-
-<sub>Previews are rendered mockups of the theme's colors; fonts on your Mac will look slightly different.</sub>
+<sub>Images are rendered from the theme's own CSS on a mock workspace. Fonts on your Mac (PingFang, Songti, Baskerville) will look a little different.</sub>
 
 ## The palette
 
 | | Blue: calm | | Yellow: what matters |
 |---|---|---|---|
 | <img src="assets/sky-blue.svg" width="20"> | **Sky blue** `#2563B8`: headings, links | <img src="assets/honey-marker.svg" width="20"> | **Honey marker** `#FFE066`: `**bold**` becomes a highlighter stroke |
-| <img src="assets/sky-highlight.svg" width="20"> | **Sky highlight** `#E2EDF9`: behind headings and `==highlights==` | <img src="assets/sunshine.svg" width="20"> | **Sunshine** `#FFD60A`: the `[!sun]` sticky note |
+| <img src="assets/sky-highlight.svg" width="20"> | **Sky highlight** `#E2EDF9`: behind headings | <img src="assets/sunshine.svg" width="20"> | **Sunshine** `#FFD60A`: the `[!sun]` sticky note |
 | <img src="assets/sky-sidebar.svg" width="20"> | **Sky sidebar** `#EAF2FA`: sidebars, selected file in deeper sky | <img src="assets/honey.svg" width="20"> | **Honey** `#F2C14E`: tags, quotes, checkboxes, text selection |
 | <img src="assets/sky-paper.svg" width="20"> | **Sky paper** `#F8FAFD`: the page | <img src="assets/honey-note.svg" width="20"> | **Honey note** `#FFF3B8`: sticky note background |
 
@@ -46,7 +42,11 @@ A suggestion: yellow for feelings and insights, blue for facts and things you le
 
 ![Rainbow folders and highlighter colors, light and dark](assets/rainbow.png)
 
-**Rainbow folders.** Each top-level folder in the sidebar gets a quiet, muted color: misty blue, honey, sage, apricot, lilac, dusty rose, repeating in order. It shows as a thin bar, a colored arrow and matching indent guides, so the sidebar stays calm. With the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin you can switch on **Folder color blocks** to fill each folder title with a soft tint for clearer sections, or **Turn off rainbow folders** for a plain sky-blue sidebar.
+**Rainbow folders.** Each top-level folder in the sidebar gets a quiet, muted color: misty blue, honey, sage, apricot, lilac, dusty rose, repeating in order. It shows as a thin bar, a colored arrow and matching indent guides, so the sidebar stays calm.
+
+![Folder styles: thin bars by default, optional color blocks in light and dark mode](assets/folder-styles.png)
+
+With the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin you can switch on **Folder color blocks** to fill each folder title with a soft tint for clearer sections, or **Turn off rainbow folders** for a plain sky-blue sidebar.
 
 **Paper highlighters.** Every highlight is a marker stroke across the lower part of the text, with slanted ends like a real highlighter on paper, and the text keeps its ink color. `**bold**` is honey, `==highlight==` is sky blue, and you can add:
 
