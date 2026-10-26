@@ -46,7 +46,7 @@ A suggestion: yellow for feelings and insights, blue for facts and things you le
 
 ![Rainbow folders and highlighter colors, light and dark](assets/rainbow.png)
 
-**Rainbow folders.** Each top-level folder in the sidebar gets a quiet, muted color: misty blue, honey, sage, apricot, lilac, dusty rose, repeating in order. It shows as a thin bar, a colored arrow and matching indent guides, so the sidebar stays calm. Prefer plain sky-blue? Install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin and switch on **Honey Sky → Turn off rainbow folders**.
+**Rainbow folders.** Each top-level folder in the sidebar gets a quiet, muted color: misty blue, honey, sage, apricot, lilac, dusty rose, repeating in order. It shows as a thin bar, a colored arrow and matching indent guides, so the sidebar stays calm. With the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin you can switch on **Folder color blocks** to fill each folder title with a soft tint for clearer sections, or **Turn off rainbow folders** for a plain sky-blue sidebar.
 
 **Paper highlighters.** Every highlight is a marker stroke across the lower part of the text, with slanted ends like a real highlighter on paper, and the text keeps its ink color. `**bold**` is honey, `==highlight==` is sky blue, and you can add:
 
@@ -110,7 +110,7 @@ MIT
 
 ### 彩虹文件夹和纸质荧光笔
 
-**彩虹文件夹**：侧栏里每个顶层文件夹会依次用一种柔和的莫兰迪色：雾蓝、蜂蜜、鼠尾草绿、杏色、丁香紫、玫瑰灰，循环使用。只显示一道细色条、彩色小箭头和同色的缩进线，侧栏依然安静。喜欢简洁的话，安装 Style Settings 插件，打开 **Honey Sky → Turn off rainbow folders** 就能关掉。
+**彩虹文件夹**：侧栏里每个顶层文件夹会依次用一种柔和的莫兰迪色：雾蓝、蜂蜜、鼠尾草绿、杏色、丁香紫、玫瑰灰，循环使用。只显示一道细色条、彩色小箭头和同色的缩进线，侧栏依然安静。安装 Style Settings 插件后，可以打开 **Folder color blocks**，让每个文件夹标题铺上一层柔和色块，分区更清楚；也可以打开 **Turn off rainbow folders**，让侧栏回到纯天蓝。
 
 **纸质荧光笔**：所有高亮都像在纸上用荧光笔划过，只涂文字下半截，两端微微斜切，字保持原来的墨色。加粗是蜂蜜黄，`==高亮==` 是天蓝，还可以这样写：
 

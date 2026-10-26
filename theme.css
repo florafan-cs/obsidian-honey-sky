@@ -289,6 +289,12 @@ settings:
         description: Use plain sky-blue sidebars instead of a soft color per top-level folder.
         type: class-toggle
         default: false
+    -
+        id: hs-folder-blocks
+        title: Folder color blocks
+        description: Fill each top-level folder title with a soft tint of its color, for clearer sections.
+        type: class-toggle
+        default: false
 
 */
 
@@ -321,6 +327,27 @@ body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder > .nav-folder
   border-left: 3px solid var(--hs-f);
   border-radius: 0 var(--radius-s) var(--radius-s) 0;
   font-weight: 600;
+}
+/* Optional (Style Settings → Folder color blocks): fill each folder title with
+   an opaque tint of its color, so warm tones stay clean on the blue sidebar. */
+.theme-light {
+  --hs-f1-tint: #dce8f6; --hs-f2-tint: #f6ecc9; --hs-f3-tint: #dcede3;
+  --hs-f4-tint: #f8e4d3; --hs-f5-tint: #e7e0f5; --hs-f6-tint: #f5dfe6;
+}
+.theme-dark {
+  --hs-f1-tint: rgba(143, 182, 230, 0.18); --hs-f2-tint: rgba(230, 195, 106, 0.18);
+  --hs-f3-tint: rgba(143, 202, 168, 0.18); --hs-f4-tint: rgba(238, 176, 131, 0.18);
+  --hs-f5-tint: rgba(185, 160, 227, 0.18); --hs-f6-tint: rgba(231, 157, 176, 0.18);
+}
+.nav-files-container > div > .nav-folder:nth-child(6n + 1) { --hs-f-tint: var(--hs-f1-tint); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 2) { --hs-f-tint: var(--hs-f2-tint); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 3) { --hs-f-tint: var(--hs-f3-tint); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 4) { --hs-f-tint: var(--hs-f4-tint); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 5) { --hs-f-tint: var(--hs-f5-tint); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 6) { --hs-f-tint: var(--hs-f6-tint); }
+body.hs-folder-blocks:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder > .nav-folder-title {
+  background-color: var(--hs-f-tint);
+  margin-bottom: 2px;
 }
 body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder > .nav-folder-title .collapse-icon {
   color: var(--hs-f);
