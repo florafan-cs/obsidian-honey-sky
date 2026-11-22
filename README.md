@@ -48,7 +48,17 @@ A suggestion: yellow for feelings and insights, blue for facts and things you le
 
 With the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin you can switch on **Folder color blocks** to fill each folder title with a soft tint for clearer sections, or **Turn off rainbow folders** for a plain sky-blue sidebar.
 
-**Paper highlighters.** Every highlight is a marker stroke across the lower part of the text, with slanted ends like a real highlighter on paper, and the text keeps its ink color. `**bold**` is honey, `==highlight==` is sky blue, and you can add:
+**Paper highlighters.** Every highlight is a marker stroke across the lower part of the text, with slanted ends like a real highlighter on paper, and the text keeps its ink color. `**bold**` is honey, `==highlight==` is sky blue.
+
+**Change the color with Obsidian's own highlighter (Obsidian 1.14+).** Select text, right-click → **Format → Highlight**, and pick red, orange, yellow, green, blue or purple. Or type a color emoji right after the opening `==`:
+
+```markdown
+==🔴red== ==🟠orange== ==🟡yellow== ==🟢green== ==🔵blue== ==🟣purple==
+```
+
+Each color turns into a matching paper marker. In dark mode the marker becomes a thin stroke under softly tinted text, so it never looks like a film laid over the line.
+
+On an older Obsidian, the HTML form works too:
 
 ```html
 <mark class="yellow">what matters</mark>
@@ -60,7 +70,7 @@ With the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) p
 <mark class="pink">people I love</mark>
 ```
 
-Using the [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin) plugin? Its colors work too, with rounded corners and readable text.
+Using the [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin) plugin? Its colors are kept exactly as you picked them.
 
 ## Fonts
 
@@ -112,7 +122,17 @@ MIT
 
 **彩虹文件夹**：侧栏里每个顶层文件夹会依次用一种柔和的莫兰迪色：雾蓝、蜂蜜、鼠尾草绿、杏色、丁香紫、玫瑰灰，循环使用。只显示一道细色条、彩色小箭头和同色的缩进线，侧栏依然安静。安装 Style Settings 插件后，可以打开 **Folder color blocks**，让每个文件夹标题铺上一层柔和色块，分区更清楚；也可以打开 **Turn off rainbow folders**，让侧栏回到纯天蓝。
 
-**纸质荧光笔**：所有高亮都像在纸上用荧光笔划过，只涂文字下半截，两端微微斜切，字保持原来的墨色。加粗是蜂蜜黄，`==高亮==` 是天蓝，还可以这样写：
+**纸质荧光笔**：所有高亮都像在纸上用荧光笔划过，只涂文字下半截，两端微微斜切，字保持原来的墨色。加粗是蜂蜜黄，`==高亮==` 是天蓝。
+
+**用 Obsidian 自带的高亮换颜色（Obsidian 1.14 及以上）**：选中文字，右键 → **格式 → 高亮**，选红、橙、黄、绿、蓝、紫；或者在开头的 `==` 后面直接打一个颜色圆点：
+
+```markdown
+==🔴红色== ==🟠橙色== ==🟡黄色== ==🟢绿色== ==🔵蓝色== ==🟣紫色==
+```
+
+每种颜色都会变成对应的纸质荧光笔。深色模式下，荧光笔会变成文字下方的一道细笔触，字也带上同色的浅色，不会像在字上蒙了一层膜。
+
+旧版 Obsidian 也可以用 HTML 写法：
 
 ```html
 <mark class="yellow">黄色：重点</mark>
@@ -124,7 +144,7 @@ MIT
 <mark class="pink">粉色：重要的人</mark>
 ```
 
-用 Highlightr 插件选的颜色也能正常显示。
+用 Highlightr 等插件选的颜色会原样保留。
 
 ### 字体
 

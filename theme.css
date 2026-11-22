@@ -66,7 +66,7 @@ body {
   --text-accent-hover: #1d4f94;
   --text-on-accent: #ffffff;
   --text-selection: rgba(242, 193, 78, 0.35);
-  --text-highlight-bg: var(--hs-blue-hl-strong);
+  --text-highlight-bg: var(--hs-mk-blue);
   --caret-color: var(--hs-blue);
 
   --interactive-accent: var(--hs-blue);
@@ -120,7 +120,7 @@ body {
   --text-accent-hover: #7cbcff;
   --text-on-accent: #ffffff;
   --text-selection: rgba(255, 214, 10, 0.26);
-  --text-highlight-bg: var(--hs-blue-hl-strong);
+  --text-highlight-bg: var(--hs-mk-blue);
   --caret-color: var(--hs-yellow);
 
   --interactive-accent: #0a84ff;
@@ -359,10 +359,18 @@ body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder {
 
 /* ---------- Paper highlighters ----------
    Every highlight is a marker stroke over the lower part of the text, with
-   slanted ends like a real highlighter on paper. Text keeps its ink color.
-   **bold** = honey · ==text== = sky blue ·
-   <mark class="yellow|blue|pink|green|orange|purple|mint">text</mark> */
+   slanted ends like a real highlighter on paper.
+   **bold** = honey · ==text== = sky blue
+   Obsidian 1.14+ color highlights (==🔴text==, or Format → Highlight → color)
+   pick up the matching marker: red, orange, yellow, green, blue, purple.
+   Older class syntax still works:
+   <mark class="yellow|blue|pink|green|orange|purple|mint|red">text</mark>
+
+   Light mode: pastel ink under dark text.
+   Dark mode: a thin, low stroke plus tinted text, so the color never turns
+   into a muddy film laid over the whole line. */
 .theme-light {
+  --hs-mk-red: #ffc2bc;
   --hs-mk-yellow: #ffe066;
   --hs-mk-blue: #b9dcff;
   --hs-mk-pink: #ffc4d6;
@@ -372,30 +380,61 @@ body:not(.hs-rainbow-off) .nav-files-container > div > .nav-folder {
   --hs-mk-mint: #b6efe5;
 }
 .theme-dark {
-  --hs-mk-yellow: rgba(255, 214, 10, 0.42);
-  --hs-mk-blue: rgba(90, 170, 255, 0.4);
-  --hs-mk-pink: rgba(255, 120, 160, 0.4);
-  --hs-mk-green: rgba(120, 220, 120, 0.34);
-  --hs-mk-orange: rgba(255, 160, 80, 0.4);
-  --hs-mk-purple: rgba(180, 140, 255, 0.4);
-  --hs-mk-mint: rgba(80, 220, 200, 0.34);
+  --hs-mk-red: rgba(255, 110, 100, 0.3);
+  --hs-mk-yellow: rgba(255, 214, 10, 0.3);
+  --hs-mk-blue: rgba(90, 170, 255, 0.32);
+  --hs-mk-pink: rgba(255, 120, 160, 0.3);
+  --hs-mk-green: rgba(120, 220, 120, 0.28);
+  --hs-mk-orange: rgba(255, 160, 80, 0.3);
+  --hs-mk-purple: rgba(180, 140, 255, 0.32);
+  --hs-mk-mint: rgba(80, 220, 200, 0.28);
+  /* text ink that goes with each stroke */
+  --hs-ink-red: #ffaaa3;
+  --hs-ink-yellow: #ffe27a;
+  --hs-ink-blue: #a9d3ff;
+  --hs-ink-pink: #ffb3cb;
+  --hs-ink-green: #b8ecb0;
+  --hs-ink-orange: #ffc896;
+  --hs-ink-purple: #d6c4ff;
+  --hs-ink-mint: #a6eee0;
 }
-.markdown-rendered strong,
-.cm-s-obsidian span.cm-strong:not(.cm-formatting) { --hs-mk: var(--hs-mk-yellow); }
-.markdown-rendered mark,
-.cm-s-obsidian span.cm-highlight:not(.cm-formatting) { --hs-mk: var(--hs-mk-blue); }
-mark.yellow { --hs-mk: var(--hs-mk-yellow); }
-mark.blue   { --hs-mk: var(--hs-mk-blue); }
-mark.pink   { --hs-mk: var(--hs-mk-pink); }
-mark.green  { --hs-mk: var(--hs-mk-green); }
-mark.orange { --hs-mk: var(--hs-mk-orange); }
-mark.purple { --hs-mk: var(--hs-mk-purple); }
-mark.mint   { --hs-mk: var(--hs-mk-mint); }
+
+/* Feed Obsidian's own highlight palette with the paper colors, so the
+   built-in color picker, swatches and our markers all agree. */
+body {
+  --highlight-background-red: var(--hs-mk-red);
+  --highlight-background-orange: var(--hs-mk-orange);
+  --highlight-background-yellow: var(--hs-mk-yellow);
+  --highlight-background-green: var(--hs-mk-green);
+  --highlight-background-blue: var(--hs-mk-blue);
+  --highlight-background-purple: var(--hs-mk-purple);
+}
+/* Default ink per element (zero specificity, so every color variant below wins). */
+:where(.markdown-rendered strong, .cm-s-obsidian span.cm-strong:not(.cm-formatting)) {
+  --hs-mk: var(--hs-mk-yellow);
+  --hs-ink: var(--hs-ink-yellow);
+}
+:where(.markdown-rendered mark, .cm-s-obsidian span.cm-highlight:not(.cm-formatting), .cm-s-obsidian .cm-highlight-color-widget, mark) {
+  --hs-mk: var(--highlight-background);
+  --hs-ink: var(--hs-ink-blue);
+}
+
+/* Obsidian 1.14 color highlights: reading view uses mark[data-highlight],
+   the editor uses span.cm-highlight-<color>. */
+:is(.markdown-rendered mark[data-highlight="red"], .cm-s-obsidian span.cm-highlight-red, .cm-highlight-color-widget[data-highlight="red"], mark.red) { --hs-mk: var(--hs-mk-red); --hs-ink: var(--hs-ink-red); }
+:is(.markdown-rendered mark[data-highlight="orange"], .cm-s-obsidian span.cm-highlight-orange, .cm-highlight-color-widget[data-highlight="orange"], mark.orange) { --hs-mk: var(--hs-mk-orange); --hs-ink: var(--hs-ink-orange); }
+:is(.markdown-rendered mark[data-highlight="yellow"], .cm-s-obsidian span.cm-highlight-yellow, .cm-highlight-color-widget[data-highlight="yellow"], mark.yellow) { --hs-mk: var(--hs-mk-yellow); --hs-ink: var(--hs-ink-yellow); }
+:is(.markdown-rendered mark[data-highlight="green"], .cm-s-obsidian span.cm-highlight-green, .cm-highlight-color-widget[data-highlight="green"], mark.green) { --hs-mk: var(--hs-mk-green); --hs-ink: var(--hs-ink-green); }
+:is(.markdown-rendered mark[data-highlight="blue"], .cm-s-obsidian span.cm-highlight-blue, .cm-highlight-color-widget[data-highlight="blue"], mark.blue) { --hs-mk: var(--hs-mk-blue); --hs-ink: var(--hs-ink-blue); }
+:is(.markdown-rendered mark[data-highlight="purple"], .cm-s-obsidian span.cm-highlight-purple, .cm-highlight-color-widget[data-highlight="purple"], mark.purple) { --hs-mk: var(--hs-mk-purple); --hs-ink: var(--hs-ink-purple); }
+mark.pink { --hs-mk: var(--hs-mk-pink); --hs-ink: var(--hs-ink-pink); }
+mark.mint { --hs-mk: var(--hs-mk-mint); --hs-ink: var(--hs-ink-mint); }
 
 .markdown-rendered strong,
 .cm-s-obsidian span.cm-strong:not(.cm-formatting),
 .markdown-rendered mark,
 .cm-s-obsidian span.cm-highlight:not(.cm-formatting),
+.cm-s-obsidian .cm-highlight-color-widget,
 mark {
   background-color: transparent;
   background-image: linear-gradient(100deg, transparent 0.1em, var(--hs-mk) 0.3em, var(--hs-mk) calc(100% - 0.3em), transparent calc(100% - 0.1em));
@@ -406,13 +445,35 @@ mark {
   padding: 0 0.2em;
   border-radius: 0.2em;
 }
+/* Dark mode: thinner, lower stroke and tinted text instead of a film. */
+.theme-dark :is(
+  .markdown-rendered strong,
+  .cm-s-obsidian span.cm-strong:not(.cm-formatting),
+  .markdown-rendered mark:not([style]),
+  .cm-s-obsidian span.cm-highlight:not(.cm-formatting),
+  .cm-s-obsidian .cm-highlight-color-widget,
+  mark:not([style])) {
+  background-size: 100% 34%;
+  background-position: 0 96%;
+  color: var(--hs-ink);
+}
+/* The color widget only holds the swatch; keep it unpadded. */
+.cm-s-obsidian .cm-highlight-color-widget {
+  padding: 0;
+}
 /* Headings are already highlighted; no marker inside them. */
 .markdown-rendered :is(h1, h2, h3, h4, h5, h6) :is(strong, mark),
 .cm-s-obsidian .HyperMD-header :is(span.cm-strong, span.cm-highlight) {
   background-image: none;
 }
-/* Highlightr plugin marks keep their own color (inline style). */
-mark[style] {
+.theme-dark .markdown-rendered :is(h1, h2, h3, h4, h5, h6) :is(strong, mark),
+.theme-dark .cm-s-obsidian .HyperMD-header :is(span.cm-strong, span.cm-highlight) {
+  color: inherit;
+}
+/* Plugins that write their own color inline (Highlightr, Editing Toolbar…)
+   keep that color: drop our marker so it can't paint over theirs. */
+mark[style],
+.markdown-rendered mark[style] {
+  background-image: none;
   color: var(--text-normal);
-  background-size: auto;
 }
